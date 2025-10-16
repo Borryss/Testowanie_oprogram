@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Main Page</h1>
+
+        <div class="user-info">
+            <p>Hello, {{ user.username }}!</p>
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="posts">
+            {% for post in posts %}
+                <div class="post">
+                    <strong>{{ post.author.username }}</strong>
+                    <p>{{ post.content }}</p>
+                    <small>{{ post.created_at|date:"d.m.Y H:i" }}</small>
+                </div>
+            {% empty %}
+                <p>No posts.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
