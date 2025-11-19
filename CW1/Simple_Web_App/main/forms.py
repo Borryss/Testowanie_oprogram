@@ -11,3 +11,4 @@ class PostForm(forms.ModelForm):
                 'placeholder': 'Whats new?'
             })
         }
+

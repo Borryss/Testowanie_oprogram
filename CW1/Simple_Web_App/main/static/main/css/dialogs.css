@@ -1,0 +1,79 @@
+:root {
+    --bg-color: #121212;
+    --card-color: #1e1e1e;
+    --text-color: #e6e6e6;
+    --accent: #1da1f2;
+    --border-color: #2a2a2a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 600px;
+    margin: 30px auto;
+    background: var(--card-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+h2 {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.navigation-buttons button {
+    background: var(--accent);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.navigation-buttons button:hover {
+    background: #1480c3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #181818;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+}
+
+ul li a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.username {
+    text-align: right;
+
+}
