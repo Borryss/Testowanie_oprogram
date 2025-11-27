@@ -23,7 +23,7 @@ python manage.py runserver
 ```
 ## 
 The tests are performed throughout(5 min +-) 
-
+(For selenium tests, the server must be running)
 Tests are run using:
 ```
 pytest
