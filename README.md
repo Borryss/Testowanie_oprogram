@@ -1,4 +1,4 @@
-# Testowanie_oprogram
+# Testowanie_oprogramowania 
 
 
 
